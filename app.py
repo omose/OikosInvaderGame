@@ -20,11 +20,10 @@ class InvaderGame:
         # スプライトグループを作成して登録
         all = pygame.sprite.RenderUpdates()
         invader.Player.containers = all
-        invader.Shot.containers = all
 
         # スプライトの画像を登録
         invader.Player.image = function.load_image("player.png")
-        invader.Shot.image = function.load_image("shot.png")
+        
         # 自機を作成
         invader.Player()
         
