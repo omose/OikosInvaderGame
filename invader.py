@@ -16,7 +16,7 @@ class Player(pygame.sprite.Sprite):
         # imageとcontainersはmain()でセットされる
         pygame.sprite.Sprite.__init__(self, self.containers)
         self.rect = self.image.get_rect()
-        self.rect.bottom = SCR_RECT.bottom  # プレイヤーが画面の一番下
+        self.rect.bottom =　SCR _RECT.bottom  # プレイヤーが画面の一番下
     def update(self):
         # 押されているキーをチェック
         pressed_keys = pygame.key.get_pressed()
