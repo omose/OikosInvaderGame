@@ -4,6 +4,7 @@ import pygame
 from pygame.locals import *
 import os
 import sys
+import beam
 
 SCR_RECT = Rect(0, 0, 640, 480)
 WHITE = (255,255,255)
@@ -27,22 +28,24 @@ class Player(pygame.sprite.Sprite):
         self.rect.clamp_ip(SCR_RECT)
         #スペースキーが押されたらショット！！！！
         if pressed_keys[K_SPACE]:
-            Shot(self.rect.center)
+           beam.Beam(self.rect.center)
+        
 
-class Shot(pygame.sprite.Sprite):
-    """戦車のミサイル"""
-    speed = 9
-    def __init__(self,pos):
-         # imageとcontainersはmain()でセットされる
-        pygame.sprite.Sprite.__init__(self, self.containers)
-        self.rect = self.image.get_rect()
-        self.rect.center = pos
 
-    def update(self):
-        self.rect.move_ip(0, -self.speed)
-        self.outwindow()
+# class Shot(pygame.sprite.Sprite):
+#     """戦車のミサイル"""
+#     speed = 9
+#     def __init__(self,pos):
+#          # imageとcontainersはmain()でセットされる
+#         pygame.sprite.Sprite.__init__(self, self.containers)
+#         self.rect = self.image.get_rect()
+#         self.rect.center = pos
 
-    def outwindow(self):
-        if self.rect.bottom < 0:
-            self.kill()
+#     def update(self):
+#         self.rect.move_ip(0, -self.speed)
+#         self.outwindow()
+
+#     def outwindow(self):
+#         if self.rect.bottom < 0:
+#             self.kill()
 

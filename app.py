@@ -4,7 +4,7 @@ import pygame
 from pygame.locals import *
 import os
 import sys
-import invader
+import invader, beam
 import function
 
 SCR_RECT = Rect(0, 0, 640, 480)
@@ -20,11 +20,12 @@ class InvaderGame:
         # スプライトグループを作成して登録
         all = pygame.sprite.RenderUpdates()
         invader.Player.containers = all
-        invader.Shot.containers = all
+        beam.Beam.containers = all
 
         # スプライトの画像を登録
         invader.Player.image = function.load_image("player.png")
-        invader.Shot.image = function.load_image("shot.png")
+        beam.Beam.image = function.load_image("shot.png")
+        
         # 自機を作成
         invader.Player()
         
