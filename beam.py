@@ -9,7 +9,7 @@ SCR_RECT = Rect(0, 0, 640, 480)
 WHITE = (255,255,255)
 
 class Beam(pygame.sprite.Sprite):
-	"""Beam"""
+	"""Beam1"""
 	speed = -10
 	def __init__(self, pos):
 		pygame.sprite.Sprite.__init__(self, self.containers)
