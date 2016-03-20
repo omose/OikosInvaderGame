@@ -4,6 +4,7 @@ import pygame
 from pygame.locals import *
 import os
 import sys
+import beam
 
 SCR_RECT = Rect(0, 0, 640, 480)
 WHITE = (255,255,255)
@@ -27,4 +28,4 @@ class Player(pygame.sprite.Sprite):
         self.rect.clamp_ip(SCR_RECT)
         #スペースキーが押されたらショット！！！！
         if pressed_keys[K_SPACE]:
-            pass
+            beam.Beam(self.rect.center)
