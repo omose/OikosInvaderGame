@@ -16,7 +16,7 @@ class Player(pygame.sprite.Sprite):
         # imageとcontainersはmain()でセットされる
         pygame.sprite.Sprite.__init__(self, self.containers)
         self.rect = self.image.get_rect()
-        self.rect.bottom = SCR_RECT.bottom  # プレイヤーが画面の一番下
+        self.rect.bottom =　SCR _RECT.bottom  # プレイヤーが画面の一番下
     def update(self):
         # 押されているキーをチェック
         pressed_keys = pygame.key.get_pressed()
@@ -29,23 +29,4 @@ class Player(pygame.sprite.Sprite):
         #スペースキーが押されたらショット！！！！
         if pressed_keys[K_SPACE]:
            beam.Beam(self.rect.center)
-        
-
-
-# class Shot(pygame.sprite.Sprite):
-#     """戦車のミサイル"""
-#     speed = 9
-#     def __init__(self,pos):
-#          # imageとcontainersはmain()でセットされる
-#         pygame.sprite.Sprite.__init__(self, self.containers)
-#         self.rect = self.image.get_rect()
-#         self.rect.center = pos
-
-#     def update(self):
-#         self.rect.move_ip(0, -self.speed)
-#         self.outwindow()
-
-#     def outwindow(self):
-#         if self.rect.bottom < 0:
-#             self.kill()
 

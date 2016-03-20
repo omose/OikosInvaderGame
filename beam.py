@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+#coding: utf-8
 import pygame
 from pygame.locals import *
 import os
@@ -21,4 +23,5 @@ class Beam(pygame.sprite.Sprite):
 		self.rect.move_ip(0,self.speed)
 		if self.rect.bottom < SCR_RECT.top:
 			self.kill()
+
 
