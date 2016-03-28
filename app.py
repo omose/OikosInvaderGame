@@ -27,7 +27,7 @@ class InvaderGame:
         beam.Beam.image = function.load_image("shot.png")
         
         # 自機を作成
-        invader.Player()
+        invader.Playerdesu()
         
         clock = pygame.time.Clock()
         while True:
